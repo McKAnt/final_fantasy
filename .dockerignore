@@ -1,0 +1,6 @@
+.git/
+log/*
+app/assets/builds/*
+public/assets/
+storage/*
+tmp/*
