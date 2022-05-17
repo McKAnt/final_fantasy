@@ -7,5 +7,6 @@ COPY . .
 
 ENV SECRET_KEY_BASE=asdf
 ENV RAILS_ENV=production
+ENV RAILS_LOG_TO_STDOUT=yup
 CMD ["bin/rails", "server"]
 EXPOSE 3000
