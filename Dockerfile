@@ -1,3 +1,4 @@
+# Based on: https://github.com/nickjj/docker-rails-example/blob/main/Dockerfile
 FROM ruby:3.1.2
 WORKDIR /app
 
