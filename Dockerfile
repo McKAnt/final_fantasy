@@ -9,5 +9,10 @@ COPY . .
 ENV SECRET_KEY_BASE=asdf
 ENV RAILS_ENV=production
 ENV RAILS_LOG_TO_STDOUT=yup
+ENV RAILS_SERVE_STATIC_FILES=yup
+
+# TODO: Move this to a separate stage
+RUN bin/rails assets:precompile
+
 CMD ["bin/rails", "server"]
 EXPOSE 3000
