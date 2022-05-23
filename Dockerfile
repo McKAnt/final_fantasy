@@ -9,10 +9,10 @@ COPY . .
 ENV SECRET_KEY_BASE=asdf
 ENV RAILS_ENV=production
 ENV RAILS_LOG_TO_STDOUT=yup
-ENV RAILS_SERVE_STATIC_FILES=yup
 
-# TODO: Move this to a separate stage
+# TODO: Move build to a separate stage and remove the serving of static files
 RUN bin/rails assets:precompile
+ENV RAILS_SERVE_STATIC_FILES=yup
 
 CMD ["bin/rails", "server"]
 EXPOSE 3000
